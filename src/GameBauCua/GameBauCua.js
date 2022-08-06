@@ -2,10 +2,11 @@ import React from 'react'
 import DiemCuoc from './DiemCuoc'
 import ListDatCuoc from './ListDatCuoc'
 import ListXucXac from './ListXucXac'
+import './CSS/GameBauCua.css'
 
 export default function GameBauCua(props) {
     return (
-        <div className='container-fluid'>
+        <div id="GameBauCua" className='container-fluid'>
             <DiemCuoc />
             <div className='row'>
                 <div className='col-8'>
