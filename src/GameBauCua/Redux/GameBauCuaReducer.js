@@ -16,11 +16,12 @@ const initialState = {
     ]
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default (state = initialState, action) => {
     switch (action.type) {
-        case 'DAT_CUOC_BAU_CUA': {
+        case 'BET': {
             const ListBetUpdate = [...state.ListBet];
-            const index = ListBetUpdate.findIndex(item => item.id === action.item.id)
+            const index = ListBetUpdate.findIndex(dice => dice.id === action.item.id)
             if (index !== -1) {
                 if (action.tangGiam) {
                     if (state.totalScore > 0) {
@@ -40,13 +41,40 @@ export default (state = initialState, action) => {
         }
         case 'PLAY': {
             const randomDiceArray = [];
-            for (let i = 0; i < 3; i++){
+            for (let i = 0; i < 3; i++) {
+                // Tạo ra số ngẫu nhiên tù 1->6
                 let randomNumber = Math.floor(Math.random() * 6);
                 const randomDice = state.ListBet[randomNumber];
                 randomDiceArray.push(randomDice);
             }
+            //Cập nhật lại mảng xúc xắc
             state.diceArray = randomDiceArray;
-            return { ...state}
+            //Xử lý điểm thưởng
+            randomDiceArray.forEach((item, index) => {
+                let indexListBet = state.ListBet.findIndex(dice => dice.id === item.id);
+                if (index !== -1) {
+                    state.totalScore += state.ListBet[indexListBet].betPoint;
+                }
+            })
+            //Xử lý hoàn tiền
+            state.ListBet.forEach((dice,index)=>{
+                let indexRandomDice = randomDiceArray.findIndex(xxnn => xxnn.id === dice.id);
+                if (indexRandomDice !== -1) {
+                    state.totalScore += dice.betPoint;
+                }
+            })
+            // Xử lý làm mới
+            state.ListBet = state.ListBet.map((dice,index)=>{
+                return {...dice,betPoint :0}
+            })
+            return { ...state }
+        }
+        case 'REPLAY':{
+            state.totalScore = 1000;
+            state.ListBet = state.ListBet.map((item,index)=>{
+                return {...item,betPoint :0}
+            })
+            return {...state}
         }
 
         default:

@@ -5,13 +5,15 @@ export default function QuanCuoc(props) {
   const dispatch = useDispatch();
   const { item } = props;
 
+  
+
   return (
     <div className='mt-3'>
       <img src={item.image} alt='img' style={{ width: 200 }} />
       <div className='bg-success mt-2 pb-2 text-center' style={{ width: 200, borderRadius: '10' }}>
         <button onClick={() => {
           dispatch({
-            type: 'DAT_CUOC_BAU_CUA',
+            type: 'BET',
             item,
             tangGiam: true,
           })
@@ -19,7 +21,7 @@ export default function QuanCuoc(props) {
         <span className='mt-2' style={{ color: 'yellow', fontSize: 25 }}>{item.betPoint} </span>
         <button onClick={() => {
           dispatch({
-            type: 'DAT_CUOC_BAU_CUA',
+            type: 'BET',
             item,
             tangGiam: false,
           })

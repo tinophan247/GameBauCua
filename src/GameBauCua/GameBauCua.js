@@ -6,7 +6,7 @@ import './CSS/GameBauCua.css'
 
 export default function GameBauCua(props) {
     return (
-        <div id="GameBauCua" className='container-fluid'>
+        <div id="GameBauCua" className='container-fluid' style={{margin:0}}>
             <DiemCuoc />
             <div className='row'>
                 <div className='col-8'>
