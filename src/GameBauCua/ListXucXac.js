@@ -9,7 +9,7 @@ export default function ListXucXac(props) {
 
   return (
     <div className='mt-5 ml-5'>
-      <div className='bg-white' style={{ width: 300, height: 300, borderRadius: 150, paddingLeft: 10 }}>
+      <div  style={{ width: 300, height: 300, borderRadius: 150, paddingLeft: 10, background : 'white' }}>
         <div className='row'>
           <div className=' col-12 text-center' style={{ marginLeft: 75}}>
             <XucXac item={diceArray[0]} />
