@@ -9,7 +9,7 @@ export default function DiemCuoc(props) {
   return (
     <div>
       <h3 className='text-center display-4 text-success ' style={{marginTop:0}}>
-        Game Bầu Cua WDA
+        Game Bầu Cua
       </h3>
       <div className='text-center mt-5'>
         <span style={{ fontSize: '20px', borderRadius: "5%" }} className="p-3 text-white bg-danger">Tiền thưởng: 

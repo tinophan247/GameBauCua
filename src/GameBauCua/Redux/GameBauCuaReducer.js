@@ -1,18 +1,18 @@
 
 const initialState = {
     ListBet: [
-        { id: 'nai', image: './img/GameBauCua/Nhan.jpg', betPoint: 0 },
-        { id: 'bau', image: './img/GameBauCua/Trieu.jpg', betPoint: 0 },
-        { id: 'ga', image: './img/GameBauCua/Quyen.jpg', betPoint: 0 },
-        { id: 'ca', image: './img/GameBauCua/Han.jpg', betPoint: 0 },
-        { id: 'cua', image: './img/GameBauCua/Vy.jpg', betPoint: 0 },
-        { id: 'tom', image: './img/GameBauCua/long.jpg', betPoint: 0 },
+        { id: 'nai', image: './img/GameBauCua/nai.png', betPoint: 0 },
+        { id: 'bau', image: './img/GameBauCua/bau.png', betPoint: 0 },
+        { id: 'ga', image: './img/GameBauCua/ga.png', betPoint: 0 },
+        { id: 'ca', image: './img/GameBauCua/ca.png', betPoint: 0 },
+        { id: 'cua', image: './img/GameBauCua/cua.png', betPoint: 0 },
+        { id: 'tom', image: './img/GameBauCua/tom.png', betPoint: 0 },
     ],
     totalScore: 300,
     diceArray: [
-        { id: 'bau', image: './img/GameBauCua/Trieu.jpg', betPoint: 0 },
-        { id: 'ga', image: './img/GameBauCua/Nhan.jpg', betPoint: 0 },
-        { id: 'nai', image: './img/GameBauCua/Quyen.jpg', betPoint: 0 },
+        { id: 'bau', image: './img/GameBauCua/bau.png', betPoint: 0 },
+        { id: 'ga', image: './img/GameBauCua/ga.png', betPoint: 0 },
+        { id: 'nai', image: './img/GameBauCua/nai.png', betPoint: 0 },
     ]
 }
 
